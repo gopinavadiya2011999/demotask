@@ -1,5 +1,6 @@
 import 'package:demotask/infrastructure/constant/app_constant.dart';
 import 'package:demotask/infrastructure/constant/color_constant.dart';
+import 'package:demotask/ui/common_widgets/common_inkwell.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,11 @@ class UserDetailAppbar extends StatelessWidget {
             margin: const EdgeInsets.only(top: 16, bottom: 15, left: 16, right: 16),
             child: Row(
               children: [
-                const Icon(Icons.arrow_back),
+                CommonInkwell(
+                   onTap: () {
+                     Get.back();
+                   },
+                    child: const Icon(Icons.arrow_back)),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
